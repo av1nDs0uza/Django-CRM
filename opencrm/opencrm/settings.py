@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'userprofile',
     'dashboard',
     'lead',
+    'client',
+    'team',
 ]
 
 MIDDLEWARE = [
