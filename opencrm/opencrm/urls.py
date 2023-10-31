@@ -25,9 +25,12 @@ from userprofile.views import signup, myaccount
 urlpatterns = [
     path('', index, name='index'),
     path('dashboard/leads/', include('lead.urls')),
+<<<<<<< HEAD
     path('dashboard/clients/', include('client.urls')),
     path('dashboard/myaccount/', myaccount, name='myaccount'),
     path('dashboard/teams/', include('team.urls')),
+=======
+>>>>>>> parent of 221f6ca (leads completed)
     path('dashboard/', include('dashboard.urls')),
     path('about/', about, name='about'),
     path('sign-up/', signup, name='signup'),

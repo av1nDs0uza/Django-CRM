@@ -5,12 +5,15 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import AddLeadForm
 from .models import Lead
 
+<<<<<<< HEAD
 from client.models import Client 
 from team.models import Team
 
+=======
+>>>>>>> parent of 221f6ca (leads completed)
 @login_required
 def leads_list(request):
-    leads = Lead.objects.filter(created_by=request.user,converted_to_client=False)
+    leads = Lead.objects.filter(created_by=request.user)
 
     return render(request, 'lead/leads_list.html', {
         'leads': leads
@@ -81,6 +84,7 @@ def add_lead(request):
 
     return render(request, 'lead/add_lead.html', {
         'form': form
+<<<<<<< HEAD
     })
     
 @login_required
@@ -104,3 +108,6 @@ def convert_to_client(request, pk):
 
     
     return redirect('leads_list')
+=======
+    })
+>>>>>>> parent of 221f6ca (leads completed)
